@@ -128,6 +128,8 @@ def process_wrapper_write_to_mongodb(file_name_raw: str,
                                               str(chunk_start),
                                               str(chunk_size),
                                               str(duration)])+'\n')
+                    except:
+                        print(f'errors with statistics: {chunk_start};{chunk_size}')
                     finally:
                         lock_write_file.release()
                     # endregion
