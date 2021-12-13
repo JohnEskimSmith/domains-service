@@ -144,6 +144,7 @@ def init_globals(counter, locker):
     chunk_sync = counter
     lock_write_file = locker
 
+
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='recreate Sonar dataset FDNS')
 
