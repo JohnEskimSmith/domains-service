@@ -56,7 +56,7 @@ def create_updateone_operation(row: str, need_date: int) -> Tuple[bool, Union[st
         need_type: Optional[str] = record.get('type')
         if need_type == 'a':
             ip4: Optional[int] = convert_ip(record.get('value'))
-            if ip4:
+            if ip4:  # yes skip 0.0.0.0, -> 0 and 0 is not True
                 raw_domain_record: Optional[str] = record.get('name')
                 if validate_domain(raw_domain_record):
                     raw_domain_record = raw_domain_record.lower().strip()
