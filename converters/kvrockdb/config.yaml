@@ -1,0 +1,17 @@
+partitions_servers:
+  number_0:
+    host: 192.168.1.150
+    port: 8888
+  number_1:
+    host: 192.168.1.150
+    port: 8889
+  number_2:
+    host: 192.168.1.150
+    port: 8890
+schema_keys:
+  subdomains: S
+  ipaddresses: I
+  subdomains_ipaddresses: SI
+const_hashs:
+  subdomains: 10
+
